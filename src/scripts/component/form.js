@@ -1,3 +1,4 @@
+import {savePointsOfInterest} from "./eventListener"
 
 function createForm(){
 let formContainer = document.querySelector("#container")
@@ -10,23 +11,33 @@ formContainer.innerHTML = `
 </fieldset>
 <fieldset>
     <label for="descriptionOfInterest">Description of interest:</label>
-    <input type="text" name="descriptionOfInterest" id="descriptionOfInterest:" >
+    <input type="text" name="descriptionOfInterest" id="descriptionOfInterest" >
 </fieldset>
 <fieldset>
-    <label for="locationOfEvent">Cost:</label>
-    <input type="text" name="locationOfEvent" id="locationOfEvent">
-</fieldset>
+    <label for="costOfInterest ">Cost:</label>
+    <input type="number" name="costOfInterest" id="costOfInterest">
 </fieldset>
 <fieldset>
     <label for="pickLocation">Choose your location:</label>
-    <select>
-    <option value="Italy">Italy</option>
-    <option value="Switzerland">Switzerland</option>
-    <option value="France">France</option>
+    <select id = "locationOfInterest">
+    <option value=1>Italy</option>
+    <option value=2>Switzerland</option>
+    <option value=3>France</option>
     </select>
 </fieldset>
 <button id= "saveBtn" type="button">Save</button>
-<div id = "displayEvents"></div>
+<div id ="displayInterest">
+<h3>Italy</h3>
+<div id= "italyDisplay"></div>
+<h3>Switzerland</h3>
+<div id= "SwitzerlandDisplay"></div>
+<h3>France</h3>
+<div id="franceDisplay"></div>
+</div>
 `
+savePointsOfInterest()
+
 }
+
+
 export {createForm}

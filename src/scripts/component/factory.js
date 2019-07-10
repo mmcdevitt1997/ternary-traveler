@@ -1,8 +1,11 @@
-function interestFactory(){
+function interestFactory(name, id, description, cost){
     return {
         name: name,
-        placeId:
-
+        placeId: id,
+        description: description,
+        cost: cost,
+        // review: review,
     }
 
 }
+export{interestFactory}
